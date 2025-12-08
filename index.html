@@ -3,237 +3,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salma Mahmoud</title>
-    <meta name="description" content="Salma Mahmoud - Frontend web developer. HTML, CSS, JavaScript. Portfolio and contact.">
+    <title>Salma Mahmoud | Frontend Developer</title>
+    <meta name="description" content="Creative Frontend Developer crafting beautiful, responsive web experiences with HTML, CSS, JavaScript, and modern frameworks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <!-- Header Start -->
-     <header id="home" class="home">
-        <div class="navbar" role="navigation" aria-label="Main navigation">
-            <nav>
-                <a href="#home" id="logo">Salma Mahmoud</a>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="#home" class="logo">Salma <span>Mahmoud</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="header-content">
-            <div class="content-text">
-                <p><span class="p-gray">HI There, I'm</span></p>
-                <h1>Salma Mahmoud</h1>
-                <p class="title">Frontend web developer</p>
-                <div class="social" aria-label="Social links">
-                    <a href="https://www.facebook.com/salmaamahmouudd" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/salma-mahmoud-520b222a4" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/salmaamahmmoudd?igsh=MnFoaTd1OTkyenZr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/salmamahmoudd" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
-                    </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Hi, I'm</p>
+                    <h1 class="hero-title">Salma <span class="highlight">Mahmoud</span></h1>
+                    <h2 class="hero-role">Frontend Developer & UI/UX Enthusiast</h2>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/salmamahmoudd" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/salma-mahmoud-520b222a4" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/salmaamahmouudd" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/salmaamahmmoudd" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href="#about" class="button">About Me <i class="fa-solid fa-circle-arrow-down"></i></a>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <img src="./img/Salma.jpg" alt="Salma Mahmoud - Frontend Developer" loading="eager">
+                    </div>
+                </div>
             </div>
-            <img src="./img/Salma.jpg" alt="Portrait of Salma Mahmoud" width="320">
         </div>
-     </header>
-     <!-- Header End -->
-     <main id="main">
-      <!-- About Start -->
-       <section id="about">
-           <div class="container">
-            <h2>About Me</h2>
-            <hr>
-            <div class="about-contant">
-                <div class="col-1">
-                 <h3>I'm <span class="heading-color">Salma Mahmoud,</span> a web developer</h3>
-                 <p>I'm a front-end web developer with a strong passion for creating visually appealing and user-friendly web applications. I am very passionate about improving my coding skills & developing applications & websites.
-                 </p>
-                 <p>
-                 I have also goined a solid foundation in HTML, CSS and JavaScript. I am always eager to learn new technologies and techniques to enhance my skillset.
-                 </p>
-                </div>
-                <div class="col-2">
-                  <p><b>Age:</b> 24</p>
-                  <p><b>Email:</b> <a href="mailto:salmamahmoudd@gmail.com">salmamahmoudd@gmail.com</a></p>
-                  <p><b>Place:</b> 15 May - Egypt</p>
-                </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="highlight">Story</span></h2>
+                <p class="section-subtitle">From passion to profession</p>
             </div>
-           </div>
-       </section>
-       <!-- About End -->
-        <!-- Skills Start -->
-         <section id="skills">
-            <div class="container">
-                <h2><i class="fa-solid fa-laptop-code"></i> Skills & <span class="heading-color">Abilites</span> 
-                </h2>
-                <hr>
-                <div class="skills-content">
-                    <div class="row">
-                        <div class="item">
-                            <img src="./img/html.jpg" alt="HTML logo" loading="lazy">
-                            <p>HTML</p>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./img/WhatsApp Image 2025-12-08 at 12.50.26 PM.jpeg" alt="Salma working on laptop" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>Hello! I'm Salma</h3>
+                    <p>My journey into web development started with a simple curiosity about how websites work. What began as a hobby soon turned into a passion that I've been pursuing professionally for over 3 years.</p>
+                    
+                    <p>I remember building my first website - it was a simple blog for my university projects. The moment I saw my code come to life in the browser, I knew this was what I wanted to do. The blend of creativity and logic in web development fascinated me, and I've been hooked ever since.</p>
+                    
+                    <p>Today, I specialize in creating responsive, accessible, and performant web applications. I believe in writing clean, maintainable code and creating interfaces that are not just beautiful but also intuitive and user-friendly.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">Projects Completed</span>
                         </div>
-                        <div class="item">
-                            <img src="./img/css.jpg" alt="CSS logo" loading="lazy">
-                            <p>CSS</p>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-text">Years Experience</span>
                         </div>
-                        <div class="item">
-                            <img src="./img/javascript.jpg" alt="JavaScript logo" loading="lazy">
-                            <p>JavaScript</p>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-text">Client Satisfaction</span>
                         </div>
-                        <div class="item">
-                            <img src="./img/bootstrap.jpg" alt="Bootstrap logo" loading="lazy">
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="item">
-                            <img src="./img/tailwind.png" alt="Tailwind logo" loading="lazy">
-                            <p>Tailwind</p>
-                        </div>
-                        <div class="item">
-                            <img src="./img/githup.jpg" alt="GitHub logo" loading="lazy">
-                            <p>Github</p>
-                        </div>
-                        <div class="item">
-                            <img src="./img/angular.jpg" alt="Angular logo" loading="lazy">
-                            <p>Angular</p>
-                        </div>
-                        <div class="item">
-                            <img src="./img/typescript.png" alt="TypeScript logo" loading="lazy">
-                            <p>TypeScript</p>
                     </div>
                 </div>
             </div>
-         </section>
-        <!-- Skills End -->
-         <!-- Services Start -->
-          <section id="services">
-            <div class="container">
-              <div class="heading">
-                <img src="./img/services.png" alt="Services illustration" loading="lazy">
-                <h2>My <span class="heading-color">Services</span></h2>
-              </div>
-              <hr>
-              <div class="row">
-                    <div class="item">
-                        <img src="./img/labtop.png" alt="Laptop illustration" loading="lazy">
-                         <h3>Web Development</h3>
-                         <p>I can build a website by using HTML, CSS and JavaScript.</p>
-                    </div>
-                     <div class="item">
-                        <img src="./img/responsive.png" alt="Responsive design illustration" loading="lazy">
-                         <h3>Responsive Design</h3>
-                         <p>Your website will be 100% responsive for all devices: Tablets and Smart phones.</p>
-                    </div>
-                     <div class="item">
-                        <img src="./img/creativedesign.png" alt="Creative design illustration" loading="lazy">
-                         <h3>Creative Design</h3>
-                         <p>I can edit your current website by adding a new content to make it much better.</p>
-                    </div>
-                     <div class="item">
-                        <img src="./img/webideas.png" alt="Web ideas illustration" loading="lazy">
-                         <h3>Web Ideas</h3>
-                         <p>I could turn your ideas into a real projects with high quality.</p>
-                    </div>
-                     <div class="item">
-                        <img src="./img/retouch.png" alt="Retouch illustration" loading="lazy">
-                         <h3>Retouch</h3>
-                         <p>I can help you by redesign your current website to looks much better.</p>
-                    </div>
-                     <div class="item">
-                        <img src="./img/support.png" alt="Support illustration" loading="lazy">
-                         <h3>Support</h3>
-                         <p>Support is available if you wanna make any changes for your website after dilvering it.</p>
-                    </div>
-              </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & <span class="highlight">Learning</span></h2>
+                <p class="section-subtitle">My academic journey</p>
             </div>
-          </section>
-         <!-- Services End -->
-          <!-- Portfolio Start -->
-           <section id="portfolio">
-                <div class="container">
-                    <h2><i class="fa-solid fa-laptop-code"></i> My <span class="heading-color">Portfolio</span> 
-                </h2>
-                <hr>
-                <div class="row">
-                    <div class="item">
-                        <img src="./img/E-Commerce.png" alt="E-Commerce project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>E-Commerce</h3>
-                            <a href="https://salmamahmoudd.github.io/E-Commerce/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Frontend Development Specialization</h3>
+                        <p class="timeline-place">Online Courses & Self-Study</p>
+                        <p>Advanced studies in modern JavaScript frameworks, responsive design principles, and web performance optimization.</p>
                     </div>
-                    <div class="item">
-                        <img src="./img/The Coffee Vibe.png" alt="The Coffee Vibe project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>The Coffee Vibe</h3>
-                            <a href="https://salmamahmoudd.github.io/The-Coffee-Vibe/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Computer Science</h3>
+                        <p class="timeline-place">University of Technology</p>
+                        <p>Graduated with honors, focusing on web technologies, human-computer interaction, and software engineering principles.</p>
                     </div>
-                    <div class="item">
-                        <img src="./img/Lunara.png" alt="Lunara project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>Lunara</h3>
-                            <a href="https://salmamahmoudd.github.io/Writing-Is-My-Passion/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Web Development Bootcamp</h3>
+                        <p class="timeline-place">Tech Academy</p>
+                        <p>Intensive training in full-stack web development, including HTML5, CSS3, JavaScript, and modern frameworks.</p>
                     </div>
-                    <div class="item">
-                        <img src="./img/CRED.png" alt="CRED project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>CRED</h3>
-                            <a href="https://github.com/salmamahmoudd/CRED/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+                <p class="section-subtitle">Tools & technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend Development</h3>
                     </div>
-                    <div class="item">
-                        <img src="./img/Bookmark.png" alt="Bookmark project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>Bookmark</h3>
-                            <a href="https://salmamahmoudd.github.io/Bookmark/" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Vue.js</span>
                     </div>
-                    <div class="item">
-                        <img src="./img/weather.png" alt="Weather project screenshot" loading="lazy">
-                        <div class="item-content">
-                            <h3>Weather</h3>
-                            <a href="https://salmamahmoudd.github.io/Weather/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX & Design</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Material-UI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Workflow</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">npm/yarn</span>
+                        <span class="skill-tag">Chrome DevTools</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3>Frontend Developer</h3>
+                        <span class="exp-date">2023 - Present</span>
+                    </div>
+                    <p class="exp-company">Digital Solutions Agency</p>
+                    <ul class="exp-responsibilities">
+                        <li>Developed responsive web applications for clients across various industries</li>
+                        <li>Implemented modern JavaScript frameworks to improve performance</li>
+                        <li>Collaborated with designers to implement pixel-perfect interfaces</li>
+                        <li>Mentored junior developers in best practices</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3>Web Development Intern</h3>
+                        <span class="exp-date">2022 - 2023</span>
+                    </div>
+                    <p class="exp-company">Tech Innovators Inc.</p>
+                    <ul class="exp-responsibilities">
+                        <li>Assisted in building and maintaining client websites</li>
+                        <li>Participated in code reviews and team meetings</li>
+                        <li>Developed reusable components for the company's UI library</li>
+                        <li>Improved website loading speed by 40% through optimization</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3>Freelance Developer</h3>
+                        <span class="exp-date">2021 - 2022</span>
+                    </div>
+                    <p class="exp-company">Self-Employed</p>
+                    <ul class="exp-responsibilities">
+                        <li>Built custom websites for small businesses and startups</li>
+                        <li>Provided ongoing maintenance and support services</li>
+                        <li>Converted design mockups into functional websites</li>
+                        <li>Implemented SEO best practices for all projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">How I can help you</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Custom Web Development</h3>
+                    <p>Building responsive, modern websites tailored to your business needs with clean, efficient code.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Creating websites that look and work perfectly on all devices - desktop, tablet, and mobile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive, user-friendly interfaces that enhance user experience and engagement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Website Maintenance</h3>
+                    <p>Providing ongoing support, updates, and improvements to keep your website running smoothly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>Improving website speed, SEO, and overall performance for better user experience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Consultation & Support</h3>
+                    <p>Technical guidance and support to help you make the most of your digital presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">My recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/E-Commerce.png" alt="E-Commerce Website" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Modern E-Commerce Platform</h3>
+                        <p>A fully responsive online store with shopping cart, product filters, and secure checkout.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a href="https://salmamahmoudd.github.io/E-Commerce/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/The Coffee Vibe.png" alt="Coffee Shop Website" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>The Coffee Vibe</h3>
+                        <p>Responsive coffee shop website with menu, location, and online ordering system.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                        </div>
+                        <a href="https://salmamahmoudd.github.io/The-Coffee-Vibe/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/weather.png" alt="Weather App" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather application with location-based forecasts and interactive maps.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>API Integration</span>
+                            <span>CSS Grid</span>
+                            <span>Local Storage</span>
+                        </div>
+                        <a href="https://salmamahmoudd.github.io/Weather/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & <span class="highlight">Certifications</span></h2>
+                <p class="section-subtitle">My accomplishments</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Frontend Developer Certification</h3>
+                    <p>Advanced certification in modern frontend technologies and best practices.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Best Project Award 2023</h3>
+                    <p>Awarded for outstanding e-commerce platform implementation.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Google UX Design Certificate</h3>
+                    <p>Professional certification in user experience design principles.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Code Excellence Award</h3>
+                    <p>Recognized for clean, maintainable, and efficient code practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client <span class="highlight">Testimonials</span></h2>
+                <p class="section-subtitle">What people say about my work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Salma delivered an amazing website that exceeded our expectations. Her attention to detail and commitment to quality is impressive.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Tech Solutions</p>
                         </div>
                     </div>
                 </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Working with Salma was a pleasure. She understood our vision perfectly and delivered a website that truly represents our brand.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Founder, Coffee Vibe</p>
+                        </div>
+                    </div>
                 </div>
-           </section>
-          <!-- Portfolio End -->
-           <!-- Contact Start -->
-            <section id="contact">
-                <div class="container">
-                   <h2><i class="fa-solid fa-headset"></i> Get In <span class="heading-color">Touch</span></h2>
-                   <hr>
-                   <div class="row">
-                    <img src="./img/contact.jpg" alt="Get In Touch illustration" loading="lazy">
-                    <form action="https://formsubmit.co/salmamahmoudd@gmail.com" method="POST">
-                        <input type="text" name="Name" id="Name" placeholder="Name" required>
-                        <input type="email" name="Email" id="Email" placeholder="Email" required>
-                        <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
-                        <button type="submit" class="button">Submit</button>
-                    </form>
-                   </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Exceptional developer with great communication skills. The project was completed on time and within budget. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Wilson">
+                        <div>
+                            <h4>Emma Wilson</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-           <!-- Contact End -->
-     </main>
-            <!-- Footer Start -->
-             <footer id="footer">
-             <p>&copy; 2025 Salma Mahmoud . All rights reserved</p>
-            </footer>
-            <!-- Footer End -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Bring Your Ideas to Life?</h2>
+                <p>Let's create something amazing together. Whether you need a new website, redesign, or technical consultation, I'm here to help.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        Start Your Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:salmamahmoudd@gmail.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <p class="section-subtitle">Let's discuss your project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:salmamahmoudd@gmail.com">salmamahmoudd@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>15 May City, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>Available upon request</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/salmamahmoudd" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/salma-mahmoud-520b222a4" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/salmaamahmouudd" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/salmaamahmmoudd" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formsubmit.co/salmamahmoudd@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">Salma <span>Mahmoud</span></a>
+                    <p>Frontend Developer & UI/UX Enthusiast</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> salmamahmoudd@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 15 May City, Egypt</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Salma Mahmoud . All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
 </body>
 </html>
