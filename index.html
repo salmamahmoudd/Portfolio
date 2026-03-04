@@ -30,20 +30,28 @@
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
+            <button class="theme-toggle" aria-label="Toggle theme">
+               <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-animate>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-subtitle">Hi, I'm</p>
                     <h1 class="hero-title">Salma <span class="highlight">Mahmoud</span></h1>
-                    <h2 class="hero-role">Frontend Developer & UI/UX Enthusiast</h2>
-                    <div class="hero-buttons">
+                    <h2 class="hero-role">
+                     <span id="typing"></span>
+                     </h2>                    
+                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="./Salma Mahmoud Ahmed CV.pdf" download class="btn btn-secondary">
+                         <i class="fas fa-download"></i> Download CV
+                         </a>
                     </div>
                     <div class="hero-social">
                         <a href="https://github.com/salmamahmoudd" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -61,7 +69,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="image-frame">
+                    <div class="profile-frame">
                         <img src="./img/Salma.jpg" alt="Salma Mahmoud - Frontend Developer" loading="eager">
                     </div>
                 </div>
@@ -70,7 +78,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">My <span class="highlight">Story</span></h2>
@@ -82,7 +90,7 @@
                 </div>
                 <div class="about-text">
                     <h3>Hello! I'm Salma</h3>
-                    <p>My journey into web development started with a simple curiosity about how websites work. What began as a hobby soon turned into a passion that I've been pursuing professionally for over 3 years.</p>
+                    <p>My journey into web development started with a simple curiosity about how websites work. What began as a hobby soon turned into a passion that I've been pursuing professionally for over 2 years.</p>
                     
                     <p>I remember building my first website - it was a simple blog for my university projects. The moment I saw my code come to life in the browser, I knew this was what I wanted to do. The blend of creativity and logic in web development fascinated me, and I've been hooked ever since.</p>
                     
@@ -90,15 +98,15 @@
                     
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">50+</span>
+                            <span class="stat-number" data-count="50">0</span>
                             <span class="stat-text">Projects Completed</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">3+</span>
+                            <span class="stat-number" data-count="2" data-suffix="+">0</span>
                             <span class="stat-text">Years Experience</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">100%</span>
+                            <span class="stat-number" data-count="100" data-suffix="%">0</span>
                             <span class="stat-text">Client Satisfaction</span>
                         </div>
                     </div>
@@ -108,43 +116,51 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="education" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Education & <span class="highlight">Learning</span></h2>
                 <p class="section-subtitle">My academic journey</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Frontend Development Specialization</h3>
-                        <p class="timeline-place">Online Courses & Self-Study</p>
-                        <p>Advanced studies in modern JavaScript frameworks, responsive design principles, and web performance optimization.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Computer Science</h3>
-                        <p class="timeline-place">University of Technology</p>
-                        <p>Graduated with honors, focusing on web technologies, human-computer interaction, and software engineering principles.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022</div>
-                    <div class="timeline-content">
-                        <h3>Web Development Bootcamp</h3>
-                        <p class="timeline-place">Tech Academy</p>
-                        <p>Intensive training in full-stack web development, including HTML5, CSS3, JavaScript, and modern frameworks.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- University -->
+    <div class="timeline-item">
+        <div class="timeline-date">02/2019 – 05/2022</div>
+        <div class="timeline-content">
+            <h3>B.Sc. in Information Systems</h3>
+            <p class="timeline-place">Thebes Academy</p>
+            <p><strong>Relevant Coursework:</strong> Databases, Programming, Networking, System Analysis, Software Development.</p>
+            <p><strong>Grade:</strong> Good</p>
+        </div>
+    </div>
+    <!-- NTI Training -->
+    <div class="timeline-item">
+        <div class="timeline-date">10/2025 – 12/2025</div>
+        <div class="timeline-content">
+            <h3>MEAN Stack Development Trainee</h3>
+            <p class="timeline-place">National Telecommunication Institute (NTI)</p>
+            <p>• Completed intensive training in MongoDB, Express.js, Angular, and Node.js.</p>
+            <p>• Developed full-stack web applications using modern JavaScript and RESTful APIs.</p>
+            <p>• Designed and managed databases using MongoDB with proper data modeling.</p>
+        </div>
+    </div>
+    <!-- Route Academy -->
+    <div class="timeline-item">
+        <div class="timeline-date">02/2025 – 07/2025</div>
+        <div class="timeline-content">
+            <h3>Front-End Development Trainee</h3>
+            <p class="timeline-place">Route Academy</p>
+            <p>• Developed user-centric web interfaces using HTML, CSS, JavaScript (ES6+), and TypeScript.</p>
+            <p>• Worked with Angular, Tailwind, and Bootstrap to deliver responsive designs.</p>
+            <p>• Used Git and GitHub for version control and team collaboration.</p>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
@@ -199,58 +215,55 @@
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
-                <p class="section-subtitle">My professional journey</p>
-            </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Frontend Developer</h3>
-                        <span class="exp-date">2023 - Present</span>
-                    </div>
-                    <p class="exp-company">Digital Solutions Agency</p>
-                    <ul class="exp-responsibilities">
-                        <li>Developed responsive web applications for clients across various industries</li>
-                        <li>Implemented modern JavaScript frameworks to improve performance</li>
-                        <li>Collaborated with designers to implement pixel-perfect interfaces</li>
-                        <li>Mentored junior developers in best practices</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Web Development Intern</h3>
-                        <span class="exp-date">2022 - 2023</span>
-                    </div>
-                    <p class="exp-company">Tech Innovators Inc.</p>
-                    <ul class="exp-responsibilities">
-                        <li>Assisted in building and maintaining client websites</li>
-                        <li>Participated in code reviews and team meetings</li>
-                        <li>Developed reusable components for the company's UI library</li>
-                        <li>Improved website loading speed by 40% through optimization</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <div class="exp-header">
-                        <h3>Freelance Developer</h3>
-                        <span class="exp-date">2021 - 2022</span>
-                    </div>
-                    <p class="exp-company">Self-Employed</p>
-                    <ul class="exp-responsibilities">
-                        <li>Built custom websites for small businesses and startups</li>
-                        <li>Provided ongoing maintenance and support services</li>
-                        <li>Converted design mockups into functional websites</li>
-                        <li>Implemented SEO best practices for all projects</li>
-                    </ul>
-                </div>
-            </div>
+<section id="experience" class="experience" data-animate>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Work & <span class="highlight">Training</span></h2>
+            <p class="section-subtitle">Professional journey & internships</p>
         </div>
-    </section>
+        <div class="experience-grid">
+            <!-- Front-End Trainee -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Front-End Development Trainee</h3>
+                    <span class="exp-date">02/2025 07/2025</span>
+                </div>
+                <p class="exp-company">Route Academy</p>
+                <ul class="exp-responsibilities">
+                    <li>Developed user-centric web interfaces using HTML, CSS, JavaScript (ES6+), and TypeScript.</li>
+                    <li>Worked with Angular, Tailwind, and Bootstrap to deliver responsive designs.</li>
+                    <li>Used Git and GitHub for version control and team collaboration.</li>
+                </ul>
+            </div>
+            <!-- MEAN Stack Trainee -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>MEAN Stack Development Trainee</h3>
+                    <span class="exp-date">10/2025  12/2025</span>
+                </div>
+                <p class="exp-company">National Telecommunication Institute (NTI)</p>
+                <ul class="exp-responsibilities">
+                    <li>Completed intensive training in MongoDB, Express.js, Angular, and Node.js.</li>
+                    <li>Developed full-stack web applications using modern JavaScript and RESTful APIs.</li>
+                    <li>Designed and managed databases using MongoDB with proper data modeling.</li>
+                </ul>
+            </div>
+            <!-- Innov Egypt  -->
+           <div class="experience-card">
+           <div class="exp-header">
+        <h3>Innov Egypt Trainee</h3>
+        <span class="exp-date">01/2026 02/2026</span>
+     </div>
+     <p class="exp-company">National Telecommunication Institute (NTI)</p>
+    <ul class="exp-responsibilities">
+        <li>Completed Innov Egypt program at NTI focused on advanced web development skills.</li>
+        <li>Enhanced practical knowledge , modern frontend frameworks, and project collaboration.</li>
+    </ul>
+ </div>
+ </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">My <span class="highlight">Services</span></h2>
@@ -304,7 +317,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
@@ -421,7 +434,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
+    <section id="achievements" class="achievements" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Achievements & <span class="highlight">Certifications</span></h2>
@@ -429,7 +442,7 @@
             </div>
             <div class="achievements-grid">
                 <div class="achievement-card">
-                    <i class="fas fa-award"></i>
+                    <i class="fas fa-award" aria-label="Award-Icon"></i>
                     <h3>Frontend Developer Certification</h3>
                     <p>Advanced certification in modern frontend technologies and best practices.</p>
                 </div>
@@ -453,7 +466,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Client <span class="highlight">Testimonials</span></h2>
@@ -504,7 +517,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section id="cta" class="cta">
+    <section id="cta" class="cta" data-animate>
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Bring Your Ideas to Life?</h2>
@@ -522,7 +535,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-animate>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
@@ -580,7 +593,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-animate>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -608,7 +621,16 @@
             </div>
         </div>
     </footer>
-
+    <div class="project-overlay" id="projectOverlay">
+  <div class="overlay-content" id="overlayContent">
+    <span class="close-btn" id="closeOverlay">&times;</span>
+    <img id="overlayImg" src="" alt="">
+    <h3 id="overlayTitle"></h3>
+    <p id="overlayDesc"></p>
+    <div id="overlayTech"></div>
+    <a id="overlayLink" target="_blank">View Project</a>
+  </div>
+</div>
     <script src="./index.js"></script>
 </body>
 </html>
