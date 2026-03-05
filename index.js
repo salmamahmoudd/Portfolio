@@ -1,19 +1,16 @@
-// ======================
-// DOMContentLoaded: للتأكد من تحميل الـ DOM قبل أي كود
-// ======================
 document.addEventListener('DOMContentLoaded', function() {
 
     // ----------------------
-    // 1️⃣ Toggle Menu (الهامبرجر للـ Mobile)
+    // 1️⃣ Toggle Menu 
     // ----------------------
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active'); // فتح/قفل المينيو
+            navMenu.classList.toggle('active'); 
 
-            // تغيير أيقونة الهامبرجر لـ X والعكس
+          
             const icon = this.querySelector('i');
             if (navMenu.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -26,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ----------------------
-    // 2️⃣ Close Menu عند الضغط على أي لينك
+    // 2️⃣ Close Menu 
     // ----------------------
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
@@ -41,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ----------------------
-    // 3️⃣ Smooth Scroll للـ Anchor Links
+    // 3️⃣ Smooth Scroll 
     // ----------------------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -52,17 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(href);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // خصم ارتفاع Navbar
+                    top: targetElement.offsetTop - 80, 
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-}); // نهاية DOMContentLoaded
+}); 
 
 // ======================
-// 4️⃣ Dark Mode Toggle مع حفظ الإختيار في LocalStorage
+// 4️⃣ Dark Mode Toggle 
 // ======================
 const themeToggle = document.querySelector('.theme-toggle');
 
@@ -85,7 +82,7 @@ themeToggle.addEventListener('click', function () {
 });
 
 // ======================
-// 5️⃣ Typing Effect في الـ Hero Section
+// 5️⃣ Typing Effect 
 // ======================
 const roles = ["Frontend Developer", "Angular Developer", "UI/UX Enthusiast"];
 let roleIndex = 0;
@@ -115,7 +112,7 @@ function typeEffect() {
 typeEffect();
 
 // ======================
-// 6️⃣ Scroll Animation باستخدام Intersection Observer
+// 6️⃣ Scroll Animation 
 // ======================
 const animateElements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver((entries) => {
@@ -129,7 +126,7 @@ const observer = new IntersectionObserver((entries) => {
 animateElements.forEach(el => observer.observe(el));
 
 // ======================
-// 7️⃣ Project Overlay عند الضغط على كارد مشروع
+// 7️⃣ Project Overlay 
 // ======================
 const overlay = document.getElementById("projectOverlay");
 const overlayImg = document.getElementById("overlayImg");
@@ -157,7 +154,7 @@ cards.forEach(card => {
         overlay.classList.add("active");
     });
 
-    // Tilt effect على الكارد مع تحسين الأداء
+
     let animationFrame;
     card.addEventListener("mousemove", e => {
         cancelAnimationFrame(animationFrame);
@@ -178,7 +175,7 @@ cards.forEach(card => {
     });
 });
 
-// إغلاق Overlay عند الضغط على الخلفية أو زر الإغلاق
+
 overlay.addEventListener("click", e => {
     if (e.target === overlay) overlay.classList.remove("active");
 });
@@ -209,37 +206,37 @@ function showTestimonial() {
 setInterval(showTestimonial, 3000);
 
 // ======================
-// 🔟 Stats Counter عند الظهور
+// 🔟 Stats Counter 
 // ======================
-const allStats = document.querySelectorAll('.stat-number');
-const statsObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            const stats = entry.target.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                let target = +stat.getAttribute('data-count');
-                let suffix = stat.getAttribute('data-suffix') || '';
-                let count = 0;
-                let step = Math.ceil(target / 100);
-                let interval = setInterval(() => {
-                    count += step;
-                    if(count >= target){
-                        count = target;
-                        clearInterval(interval);
-                        stat.textContent = count + suffix;
-                    } else {
-                        stat.textContent = count + suffix;
-                    }
-                }, 20);
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
+// const allStats = document.querySelectorAll('.stat-number');
+// const statsObserver = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         if(entry.isIntersecting){
+//             const stats = entry.target.querySelectorAll('.stat-number');
+//             stats.forEach(stat => {
+//                 let target = +stat.getAttribute('data-count');
+//                 let suffix = stat.getAttribute('data-suffix') || '';
+//                 let count = 0;
+//                 let step = Math.ceil(target / 100);
+//                 let interval = setInterval(() => {
+//                     count += step;
+//                     if(count >= target){
+//                         count = target;
+//                         clearInterval(interval);
+//                         stat.textContent = count + suffix;
+//                     } else {
+//                         stat.textContent = count + suffix;
+//                     }
+//                 }, 20);
+//             });
+//             statsObserver.unobserve(entry.target);
+//         }
+//     });
+// }, { threshold: 0.5 });
 
-const statsSections = new Set();
-allStats.forEach(stat => statsSections.add(stat.closest('section')));
-statsSections.forEach(section => statsObserver.observe(section));
+// const statsSections = new Set();
+// allStats.forEach(stat => statsSections.add(stat.closest('section')));
+// statsSections.forEach(section => statsObserver.observe(section));
 
 // ======================
 // 1️⃣1️⃣ Timeline Animation
@@ -309,3 +306,32 @@ const serviceObserver = new IntersectionObserver(entries => {
 
 serviceObserver.observe(document.querySelector('.services'));
 
+// ======================
+// Active Navbar Link on Scroll
+// ======================
+
+const sections = document.querySelectorAll("section");
+const navLinksScroll = document.querySelectorAll(".nav-menu a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinksScroll.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+
+});

@@ -317,9 +317,9 @@ h1, h2, h3, h4 {
     position: absolute;
     bottom: -6px;
     left: 0;
-    width: 100%;
     height: 2px;
     background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-light);
 }
 
 @keyframes blink {
@@ -779,8 +779,8 @@ h1, h2, h3, h4 {
 }
 
 .exp-header {
-    display: flex;
-    justify-content: space-between;
+      display: inline-block;
+    width: fit-content;
     align-items: center;
     margin-bottom: 15px;
 }
