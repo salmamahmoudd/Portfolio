@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salma Mahmoud | Frontend Developer</title>
     <meta name="description" content="Creative Frontend Developer crafting beautiful, responsive web experiences with HTML, CSS, JavaScript, and modern frameworks.">
+    <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Angular">
+    <meta name="author" content="Salma Mahmoud">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -44,7 +46,7 @@
                     <p class="hero-subtitle">Hi, I'm</p>
                     <h1 class="hero-title">Salma <span class="highlight">Mahmoud</span></h1>
                     <h2 class="hero-role">
-                     <span id="typing"></span>
+                     <span id="typing" class="typing"></span>
                      </h2>                    
                      <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -173,15 +175,27 @@
                         <h3>Frontend Development</h3>
                     </div>
                     <div class="skill-tags">
+                        <span class="skill-tag">Angular</span>
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
                         <span class="skill-tag">JavaScript (ES6+)</span>
                         <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Angular</span>
-                        <span class="skill-tag">Vue.js</span>
                     </div>
                 </div>
+                <div class="skill-category">
+                  <div class="category-header">
+                        <i class="fas fa-server"></i>
+                          <h3>Backend Development</h3>
+                       </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Mongoose</span>
+                        <span class="skill-tag">JWT</span>
+                     </div>
+                    </div>
                 <div class="skill-category">
                     <div class="category-header">
                         <i class="fas fa-paint-brush"></i>
@@ -190,7 +204,6 @@
                     <div class="skill-tags">
                         <span class="skill-tag">Responsive Design</span>
                         <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Adobe XD</span>
                         <span class="skill-tag">Bootstrap</span>
                         <span class="skill-tag">Tailwind CSS</span>
                         <span class="skill-tag">Material-UI</span>
@@ -434,7 +447,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements" data-animate>
+    <section id="achievements" class="achievements" data-animate style="--delay: 0.2s">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Achievements & <span class="highlight">Certifications</span></h2>
@@ -476,12 +489,13 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>Salma delivered an amazing website that exceeded our expectations. Her attention to detail and commitment to quality is impressive.</p>
+                        <p>Salma delivered an outstanding website that exceeded our expectations. Her attention to detail and dedication to quality are truly impressive.</p>
+                        <div class="stars" data-rating="4">
+                   </div>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
                         <div>
-                            <h4>Sarah Johnson</h4>
+                            <h4>Hassan Adel</h4>
                             <p>CEO, Tech Solutions</p>
                         </div>
                     </div>
@@ -489,12 +503,13 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>Working with Salma was a pleasure. She understood our vision perfectly and delivered a website that truly represents our brand.</p>
+                        <p>Working with Salma was a great experience. She perfectly understood our vision and delivered a website that truly reflects our brand identity.</p>
+                    <div class="stars" data-rating="5">
+                   </div>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
                         <div>
-                            <h4>Michael Chen</h4>
+                            <h4>Omar Khaled</h4>
                             <p>Founder, Coffee Vibe</p>
                         </div>
                     </div>
@@ -502,12 +517,13 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>Exceptional developer with great communication skills. The project was completed on time and within budget. Highly recommended!</p>
+                        <p>Salma is an exceptional developer with excellent communication skills. She delivered the project on time and exceeded all expectations. Highly recommended!</p>
+                        <div class="stars" data-rating="4.5">
+                   </div>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Wilson">
                         <div>
-                            <h4>Emma Wilson</h4>
+                            <h4>Ahmed Ibrahim</h4>
                             <p>Marketing Director</p>
                         </div>
                     </div>
@@ -547,7 +563,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <a href="mailto:salmamahmoudd@gmail.com">salmamahmoud3020@gmail.com</a>
+                            <a href="mailto:salmamahmoud3020@gmail.com">salmamahmoud3020@gmail.com</a>
                         </div>
                     </div>
                     <div class="info-item">
@@ -577,6 +593,9 @@
                         <a href="/" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
+                        <a href="https://wa.me/201158538593" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                       </a>
                     </div>
                 </div>
                 <form class="contact-form" action="https://formsubmit.co/salmamahmoudd@gmail.com" method="POST">

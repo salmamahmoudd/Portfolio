@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ----------------------
-    // 1️⃣ Toggle Menu 
+    //  Toggle Menu 
     // ----------------------
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ----------------------
-    // 2️⃣ Close Menu 
+    // Close Menu 
     // ----------------------
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ----------------------
-    // 3️⃣ Smooth Scroll 
+    // Smooth Scroll 
     // ----------------------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -59,15 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 
 // ======================
-// 4️⃣ Dark Mode Toggle 
+// Dark Mode Toggle 
 // ======================
 const themeToggle = document.querySelector('.theme-toggle');
+
 
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
     themeToggle.querySelector("i").classList.replace("fa-moon", "fa-sun");
 }
-
+if (themeToggle) {
 themeToggle.addEventListener('click', function () {
     document.body.classList.toggle('dark');
     const icon = this.querySelector('i');
@@ -80,9 +81,10 @@ themeToggle.addEventListener('click', function () {
         localStorage.setItem("theme", "light");
     }
 });
+}
 
 // ======================
-// 5️⃣ Typing Effect 
+// Typing Effect 
 // ======================
 const roles = ["Frontend Developer", "Angular Developer", "UI/UX Enthusiast"];
 let roleIndex = 0;
@@ -112,7 +114,7 @@ function typeEffect() {
 typeEffect();
 
 // ======================
-// 6️⃣ Scroll Animation 
+// Scroll Animation 
 // ======================
 const animateElements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver((entries) => {
@@ -126,7 +128,7 @@ const observer = new IntersectionObserver((entries) => {
 animateElements.forEach(el => observer.observe(el));
 
 // ======================
-// 7️⃣ Project Overlay 
+// Project Overlay 
 // ======================
 const overlay = document.getElementById("projectOverlay");
 const overlayImg = document.getElementById("overlayImg");
@@ -182,7 +184,7 @@ overlay.addEventListener("click", e => {
 closeOverlay.addEventListener("click", () => overlay.classList.remove("active"));
 
 // ======================
-// 8️⃣ Navbar scroll effect
+//  Navbar scroll effect
 // ======================
 window.addEventListener("scroll", function() {
     var navbar = document.querySelector(".navbar");
@@ -194,52 +196,18 @@ window.addEventListener("scroll", function() {
 });
 
 // ======================
-// 9️⃣ Testimonials Slider
+// Testimonials Slider
 // ======================
 var testimonials = document.querySelectorAll(".testimonial");
 var index = 0;
 function showTestimonial() {
     testimonials.forEach(item => item.classList.remove("active"));
-    // testimonials[index].classList.add("active");
     index = (index + 1) % testimonials.length;
 }
 setInterval(showTestimonial, 3000);
 
 // ======================
-// 🔟 Stats Counter 
-// ======================
-// const allStats = document.querySelectorAll('.stat-number');
-// const statsObserver = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting){
-//             const stats = entry.target.querySelectorAll('.stat-number');
-//             stats.forEach(stat => {
-//                 let target = +stat.getAttribute('data-count');
-//                 let suffix = stat.getAttribute('data-suffix') || '';
-//                 let count = 0;
-//                 let step = Math.ceil(target / 100);
-//                 let interval = setInterval(() => {
-//                     count += step;
-//                     if(count >= target){
-//                         count = target;
-//                         clearInterval(interval);
-//                         stat.textContent = count + suffix;
-//                     } else {
-//                         stat.textContent = count + suffix;
-//                     }
-//                 }, 20);
-//             });
-//             statsObserver.unobserve(entry.target);
-//         }
-//     });
-// }, { threshold: 0.5 });
-
-// const statsSections = new Set();
-// allStats.forEach(stat => statsSections.add(stat.closest('section')));
-// statsSections.forEach(section => statsObserver.observe(section));
-
-// ======================
-// 1️⃣1️⃣ Timeline Animation
+// Timeline Animation
 // ======================
 const timelineItems = document.querySelectorAll('.timeline-item');
 const timelineObserver = new IntersectionObserver(entries => {
@@ -253,7 +221,7 @@ const timelineObserver = new IntersectionObserver(entries => {
 timelineItems.forEach(item => timelineObserver.observe(item));
 
 // ======================
-// 1️⃣2️⃣ Skills Animation
+// Skills Animation
 // ======================
 const skillsSection = document.querySelector('.skills');
 const skillsObserver = new IntersectionObserver(entries => {
@@ -273,7 +241,7 @@ skillTags.forEach((tag, index) => {
 });
 
 // ======================
-// 1️⃣3️⃣ Experience Cards Animation
+// Experience Cards Animation
 // ======================
 const expCards = document.querySelectorAll('.experience-card');
 const expObserver = new IntersectionObserver(entries => {
@@ -290,7 +258,7 @@ const expObserver = new IntersectionObserver(entries => {
 expObserver.observe(document.querySelector('.experience'));
 
 // ======================
-// 1️⃣4️⃣ Service Cards Animation
+// Service Cards Animation
 // ======================
 const serviceCards = document.querySelectorAll('.service-card');
 const serviceObserver = new IntersectionObserver(entries => {
@@ -335,3 +303,27 @@ window.addEventListener("scroll", () => {
     });
 
 });
+var stars = document.querySelectorAll(".stars");
+
+stars.forEach(function(starContainer) {
+    var rating = parseFloat(starContainer.getAttribute("data-rating"));
+    var fullStars = Math.floor(rating);
+    var hasHalf = rating % 1 !== 0;
+
+    var starsHTML = "";
+
+    for (var i = 0; i < fullStars; i++) {
+        starsHTML += '<i class="fas fa-star"></i>';
+    }
+
+    if (hasHalf) {
+        starsHTML += '<i class="fas fa-star-half-alt"></i>';
+    }
+
+    for (var i = starsHTML.split("fa-star").length - 1; i < 5; i++) {
+        starsHTML += '<i class="far fa-star"></i>';
+    }
+
+    starContainer.innerHTML = starsHTML;
+});
+

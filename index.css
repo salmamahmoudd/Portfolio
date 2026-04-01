@@ -10,6 +10,7 @@
     --text-dark: #3E3E3E;
     --text-light: #4B4B4B;
     --text-gray: #666666;
+    --text-muted: #888;
     --border-color: #E1E6EA;
     --shadow-light: 0 4px 12px rgba(107, 78, 113, 0.08);
     --shadow-medium: 0 8px 24px rgba(107, 78, 113, 0.12);
@@ -42,8 +43,8 @@ body.dark .navbar.scrolled {
 }
 
 body.dark .footer {
-    background: #000000;   
-    color: white;          
+    background: var(--bg-card);   
+    color: var(--text-dark);         
 }
 
 body.dark .footer a,
@@ -104,6 +105,15 @@ body.dark .hero {
     box-shadow: var(--shadow-heavy);
 }
 
+a:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.project-card,
+.service-card {
+    will-change: transform;
+}
+
 .theme-toggle {
     background: var(--bg-card);
     border: none;
@@ -138,6 +148,7 @@ body.dark .hero {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease-out;
+    transition-delay: var(--delay, 0s)
 }
 
 [data-animate].active {
@@ -164,6 +175,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background 0.4s ease, color 0.4s ease;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
@@ -196,6 +209,10 @@ h1, h2, h3, h4 {
     font-size: 16px;
 }
 
+.btn:active {
+    transform: scale(0.96);
+}
+
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     color: white;
@@ -223,6 +240,12 @@ h1, h2, h3, h4 {
 .btn-large {
     padding: 16px 36px;
     font-size: 18px;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 3px;
 }
 
 /* Navigation */
@@ -260,6 +283,7 @@ h1, h2, h3, h4 {
     list-style: none;
     gap: 30px;
     align-items: center;
+    z-index: 999;
 }
 
 .nav-menu a {
@@ -451,7 +475,6 @@ h1, h2, h3, h4 {
   animation-delay: 1.3s;
 }
 
-/* Profile Frame with Gradient Border */
 .profile-frame {
     width: 320px;                   
     height: 320px;
@@ -681,7 +704,7 @@ h1, h2, h3, h4 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
@@ -730,7 +753,8 @@ h1, h2, h3, h4 {
 .skill-tag:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .skills.active .skill-tag {
@@ -889,7 +913,6 @@ h1, h2, h3, h4 {
 }
 
 /* Projects Section */
-/* Projects Section */
 .projects {
     padding: 100px 0;
     background: var(--bg-light);
@@ -913,7 +936,6 @@ h1, h2, h3, h4 {
     background-clip: padding-box;
 }
 
-/* Gradient Border أنعم */
 .project-card::before {
     content: "";
     position: absolute;
@@ -923,7 +945,6 @@ h1, h2, h3, h4 {
     border-radius: var(--radius-lg);
     background-size: 400% 400%;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
     animation: gradientBorder 10s ease infinite;
@@ -935,10 +956,13 @@ h1, h2, h3, h4 {
   100% { background-position: 0% 50%; }
 }
 
-/* Hover Effect أخف */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
+}
+
+.project-card:hover img {
+    filter: brightness(0.9);
 }
 
 .project-image {
@@ -1018,7 +1042,7 @@ h1, h2, h3, h4 {
     color: var(--primary-dark);
 }
 
-/* Overlay Styles محسّن */
+/* Overlay Styles */
 .project-overlay {
     position: fixed;
     inset: 0;
@@ -1160,18 +1184,6 @@ h1, h2, h3, h4 {
     line-height: 1.5;
 }
 
-/* Scroll animation */
-[data-animate] {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.6s ease-out;
-}
-
-[data-animate].active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Testimonials Section */
 .testimonial {
     display: none;
@@ -1239,6 +1251,12 @@ h1, h2, h3, h4 {
     font-size: 14px;
 }
 
+.stars i {
+    color: gold;
+    margin-right: 3px;
+    font-size: 13px;
+}
+
 /* CTA Section */
 .cta {
     padding: 100px 0;
@@ -1247,6 +1265,7 @@ h1, h2, h3, h4 {
     text-align: center;
     position: relative;
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 .cta::before {
@@ -1256,7 +1275,7 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.2); /* subtle overlay for contrast */
+    background: rgba(0,0,0,0.2); 
     z-index: 0;
 }
 
@@ -1617,6 +1636,16 @@ body.dark .contact-form textarea {
     .cta p {
         font-size: 16px;
     }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+    }
+
+    .timeline-item::before {
+        left: -6px;
+    }
+
 }
 @media (max-width: 480px) {
     .hero-title {
