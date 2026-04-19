@@ -538,10 +538,23 @@ a:focus {
     align-items: center;
 }
 
+.about-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 .about-image img {
-    width: 90%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-medium);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-image:hover img {
+    transition: 0.5s;
 }
 
 .about-text h3 {
@@ -1597,6 +1610,11 @@ body.dark .contact-form textarea {
         gap: 30px;
     }
 
+    .about-image {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1678,6 +1696,10 @@ body.dark .contact-form textarea {
 
     .profile-frame {
         width: 220px;
+        height: 220px;
+    }
+
+    .about-image {
         height: 220px;
     }
 
